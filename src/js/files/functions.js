@@ -395,6 +395,7 @@ export function menuInit() {
 		document.addEventListener("click", function (e) {
 			if (e.target.closest('.icon-menu')) {
 				document.querySelector(".header").classList.toggle('header-open')
+				document.querySelector("#yellowBG").classList.toggle('yellowBG')
 				document.documentElement.classList.toggle("menu-open");
 			}
 		});
