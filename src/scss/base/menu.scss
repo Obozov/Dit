@@ -45,7 +45,7 @@
 }
 .icon-menu {
 		position: relative;
-		width: toRem(30);
+		width: toRem(38);
 		height: toRem(18);
 		z-index: 5;
 		@media (any-hover: none) {
@@ -59,13 +59,15 @@
 			right: 0;
 			position: absolute;
 			width: 100%;
-			height: toRem(2);
-			background-color: #000;
+			height: toRem(3);
+			background-color: rgba(28, 145, 151, 1);
 		}
 		&::before {
 			top: 0;
 		}
 		&::after {
+			width: 60%;
+			left: 0;
 			bottom: 0;
 		}
 		span {
@@ -83,6 +85,7 @@
 				transform: rotate(-45deg);
 			}
 			&::after {
+				width: 100%;
 				bottom: calc(50% - toRem(1));
 				transform: rotate(45deg);
 			}
