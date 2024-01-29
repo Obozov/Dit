@@ -16,7 +16,6 @@ global.app = {
 	path: path,
 	plugins: plugins
 }
-
 // Імпорт завдань
 import { reset } from "./config/gulp-tasks/reset.js";
 import { html } from "./config/gulp-tasks/html.js";

@@ -73,6 +73,9 @@
 		span {
 			top: calc(50% - toRem(1));
 		}
+
+		//
+		
 		.menu-open & {
 			span {
 				width: 0;

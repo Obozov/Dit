@@ -1,3 +1,26 @@
 //====================================================================================================
-
+.footer {
+	padding: 50px 0;
+	background: #1C9197;
+}
+.footer__container {
+}
+.footer__row {
+	display: grid;
+	grid-template: 1fr/10% 20% 20% 50%;
+}
+.foooter__item {
+	color: #FFF;
+	font-size: 16px;
+	font-weight: 400;
+}
+.underline{
+	text-decoration: underline;
+}
+.foooter__item-right{
+	text-align: right;
+	p{
+		
+	}
+}
 //====================================================================================================

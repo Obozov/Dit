@@ -5,6 +5,7 @@
 }
 
 .header__row {
+	padding: 12px;
 	display: flex;
 	max-width: 1550px;
 	margin: 0 auto;
@@ -31,6 +32,9 @@
 .menu__adress {
 	display: flex;
 	font-size: 18px;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 500px;
 	span{
 		font-weight: bold;
 	}
@@ -38,11 +42,12 @@
 .menu__btns{
 	display: flex;
 	justify-content: space-between;
-	width: 375px;
+	width: 100%;
+	max-width: 375px;
 }
 .menu__btn{
 	display: flex;
-	width: 176px;
+	width: 184px;
 	height: 50px;
 	justify-content: center;
 	align-items: center;
@@ -60,12 +65,30 @@ background: #1C9197;
 }
 
 
+.nav__button{
+	position: absolute;
+	@include adaptiveValue("right",200,10);
+	top: 26px;
+	width: 184px;
+	height: 50px;
+	border-radius: 14px;
+	background: #E87000;
+	color: #FFF;
+	text-align: center;
+	display: none;
+	font-weight: 900;
+	font-size: 16px;
 
+}
+.nav__button-active{
+	display: block;
+}
 .navigate{
 	max-width: 1550px;
 	margin: 0 auto; 
 	display: none;
 	padding-top: 50px;
+	position: relative;
 	.spollers__body{
 		ul li{
 			padding-top: 23px;
@@ -163,6 +186,7 @@ background: #1C9197;
 }
 .header-open{
 	height: 860px;
+	background: url('@img/Header/bg_header.png') right bottom no-repeat ;
 	
 	
 	.navigate{
@@ -175,7 +199,10 @@ background: #1C9197;
 	.logo {
 	}
 	.menu__body{
-		display: none;
+		visibility: hidden;
+		.menu__btn--orange{
+			visibility: visible;
+		}
 	}
 	.header__menu {
 		display: flex;
@@ -223,4 +250,11 @@ background: #1C9197;
 	}
 
 	
+}
+
+.arrowUp {
+	position: fixed;
+	right: 300px;
+	bottom: 100px;
+	z-index: 10;
 }

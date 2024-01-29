@@ -10,6 +10,7 @@
 	box-sizing: content-box;
 	display: flex;
 	position: relative;
+	justify-content: space-between;
 }
 .swiper-vertical {
 	.swiper-wrapper {
@@ -35,4 +36,47 @@
 }
 .swiper-button-lock {
 	display: none !important;
+}
+.swiper-button-prev,.swiper-button-next{
+	position: absolute;
+	top: 55%;
+	&:hover{
+		filter: grayscale(50%);
+	}
+	
+}
+.swiper-button-prev{
+	left: -55px;
+	&:active,:not(:active){
+		filter: grayscale(0%);
+		animation: pushL .5s ease-in-out ;
+	}
+}
+.swiper-button-next{
+	right: -55px;
+	&:active,:not(:active){
+		filter: grayscale(0%);
+		animation: pushR .5s ease-in-out ;
+	}
+}
+
+@keyframes pushR {
+	from{
+		transform: translateX(-3px);
+		filter: blur(5px);
+	}
+	to{		
+		filter: blur(0px);
+		transform: translateX(30px);
+	}
+}
+@keyframes pushL {
+	from{
+		transform: translateX(3px);
+		filter: blur(5px);
+	}
+	to{		
+		filter: blur(0px);
+		transform: translateX(-30px);
+	}
 }
